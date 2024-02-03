@@ -1,0 +1,67 @@
+#grad {
+    height: 300px;
+    width: 300px;
+    background-image: conic-gradient(yellow, red, gray, green);
+    background-color: red;
+}
+
+a:hover {
+    background-color: aqua;
+}
+
+a:link {
+    background-color: chocolate;
+}
+
+a:visited {
+    background-color: red;
+}
+
+p:last-child {
+    color: blueviolet;
+    background-color: chartreuse;
+}
+
+li:nth-child(2) {
+    background: yellow;
+}
+
+:target {
+    border: 2px solid black;
+    background-color: rgb(148, 131, 63);
+}
+
+.myname::after {
+   content: "*";
+   color: red;
+}
+
+.myname::before {
+    content: "Full ";
+    color: blue;
+}
+
+.animateme {
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    animation-name: gradial;
+    animation-duration: 10s;
+    background-color: orange;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gradial {
+    from {background-color: blueviolet;}
+    to { background-color: yellow;}
+
+}
+
+/* 
+linear-gradient
+repeating-linear-gradient
+radial-gradient
+repeating-radial-gradient
+conic-gradient
+repeating-conic-gradient
+*/
