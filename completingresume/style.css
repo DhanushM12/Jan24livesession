@@ -57,6 +57,84 @@ li:nth-child(2) {
 
 }
 
+.container {
+    width: 800px;
+    height: 400px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: blue;
+    position: relative;
+    animation: moving 5s;
+    animation-fill-mode: forwards;
+}
+
+#one {
+    animation-timing-function: linear;
+}
+
+#two {
+    animation-timing-function: ease;
+}
+
+#three {
+    animation-timing-function: ease-in;
+}
+
+#four {
+    animation-timing-function: ease-out;
+}
+
+#five {
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moving {
+    from {left: 0px}
+    to {right: 500px;}
+}
+
+.transit {
+    width: 150px;
+    height: 150px;
+    background-color: crimson;
+    transition: width 2s, height 4s;
+}
+
+.transit:hover {
+    width: 400px;
+    height: 400px;
+}
+
+#myimage {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+
+.hello {
+    width: 200px;
+    height: 100px;
+    background-color: darkorange;
+    transform: rotate(90deg)
+}
+
+.wrapping {
+    width: 100px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.wrapp {
+    overflow-wrap:inherit;
+}
 /* 
 linear-gradient
 repeating-linear-gradient
