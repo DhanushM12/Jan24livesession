@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap-reverse; */
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    gap: 10px 10px;
+}
+.box {
+    width: 350px;
+    height: 350px;
+    border: 2px solid black;
+}
+
+.one {
+    margin: 50px;
+    order: 4;
+    height: 300px;
+}
+
+.two {
+    order: 2;
+    height: 200px;
+}
+
+.three {
+    order: 1;
+}
+
+.four {
+    order: 5;
+}
+
+.five {
+    order: 3;
+}
