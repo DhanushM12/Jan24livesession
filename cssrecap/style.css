@@ -1,0 +1,56 @@
+h1 {
+    background-color: orange;
+}
+
+div {
+    background-color: blue;
+    /* display: inline; */
+    /* z-index: 100; */
+}
+
+span {
+    background-color: brown;
+    /* display: block; */
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 2px dotted blue;
+    padding: 5px;
+    box-shadow: 5px 10px red;
+}
+
+.stat {
+    position: relative;
+    left: 30px;
+}
+
+.fix {
+    position: fixed;
+    border: 2px solid black;
+    bottom: 0;
+    right: 0;
+}
+
+.abs {
+    position: absolute;
+    z-index: 1;
+    /* top: 40px; */
+}
+
+.stick {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: brown;
+    font-size: 5em;
+    /* z-index: 10; */
+}
+
+/*
+default display property of div is block
+default display property of span is inline
+default display property of img is inline-block
+*/
