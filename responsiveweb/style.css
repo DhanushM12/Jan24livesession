@@ -1,0 +1,21 @@
+div {
+   color: blue;
+}
+
+@media print {
+    div {
+        color: rgb(60, 255, 0);
+        background-color: gray;
+    }
+}
+
+div.one {
+    font-size: 30px;
+    color: rgb(8, 134, 134);
+}
+
+@media screen and (min-width: 425px) {
+    div.one {
+        color: brown;
+    }
+}
