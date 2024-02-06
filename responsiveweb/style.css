@@ -2,6 +2,11 @@ div {
    color: blue;
 }
 
+#one {
+    font-size: 30px;
+    color: rgb(8, 134, 134);
+}
+
 @media print {
     div {
         color: rgb(60, 255, 0);
@@ -9,13 +14,88 @@ div {
     }
 }
 
-div.one {
-    font-size: 30px;
-    color: rgb(8, 134, 134);
-}
-
-@media screen and (min-width: 425px) {
-    div.one {
+/* mobile */
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    #one {
         color: brown;
     }
 }
+
+/* tablet */
+@media (min-width: 768px) and (orientation: portrait) {
+    #one {
+        background-color: gray;
+    }
+    
+}
+
+/*laptop*/
+@media screen and (min-width: 1024px){
+    #one {
+        color: rebeccapurple;
+    }
+}
+
+@media not screen and (min-width: 1024px) {
+    #one {
+        color: rgb(66, 153, 51);
+    }
+}
+
+.nav {
+    overflow: hidden;
+    background-color: chocolate;
+}
+
+.nav a{
+    float: right;
+    display: block;
+    color: beige;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .nav a{
+        float: none;
+        width: 100%;
+    }
+}
+
+.column {
+    width: 20%;
+    height: 100px;
+    border: 2px solid black;
+    float: left;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .column {
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav a{
+        float: none;
+        width: 100%;
+    }
+}
+/* 
+orientation - landscape, portrait
+max-height
+min-height
+min-width
+max-width
+height
+width
+*/
