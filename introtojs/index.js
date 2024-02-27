@@ -163,29 +163,64 @@ function saveName(e){
 //    console.log(len);
 //     let checka = name.charAt(len-9-1);
 //     console.log(checka)
-    console.log(name.charAt(0));
+    // console.log(name.charAt(0));
     // console.log(name.join(' '));
 //     console.log(name.at(1));
 //     console.log(name[2]);
 //     console.log(name.toUpperCase());
-    let outputName = "";
-    name.charAt(0).toUpperCase();
-    console.log(name);
-    for(let i=1;i<len;i++){
-        let mychar = name.charAt(i);
-        if(mychar == " "){
-            if(i+1<len) {
-                mychar = mychar + name.charAt(i+1).toUpperCase();
-                i=i+1;
-            }
-        }
-        outputName = outputName + mychar;
+    // let outputName = "";
+    // name.charAt(0).toUpperCase();
+    // console.log(name);
+    // for(let i=1;i<len;i++){
+    //     let mychar = name.charAt(i);
+    //     if(mychar == " "){
+    //         if(i+1<len) {
+    //             mychar = mychar + name.charAt(i+1).toUpperCase();
+    //             i=i+1;
+    //         }
+    //     }
+    //     outputName = outputName + mychar;
         
-    }
-    console.log(outputName);
+    // }
+    // console.log(outputName);
+    // console.log(name.toLowerCase())
+
+    // let newname = "newname";
+    
+    // console.log(name +" "+newname)
+    // console.log(name.concat(" ",newname, "!"))
+    // let trimmedname = name.trim();
+    // let trimmedname = name.trimStart();
+    // let trimmedname = name.trimEnd();
+    // console.log(trimmedname);
+    // console.log(trimmedname + " neknan")
+    // let res = name.repeat(3);
+    // let res = name.replace("CN", "Coding Ninjas");
+    let str = name.split(' ');
+    let newslice = str.slice(1, 3);
+
+    console.log(str);
+    console.log(newslice)
+    let newsplice = str.splice(3, 3)
+    console.log(str);
+    // 1st paramter is index position and from that position take elements
+    console.log(newsplice)
+//     let outstr = "";
+//    for(let i=0;i<str.len();i++){
+//         let char = 
+//    }
     // document.getElementById('print-name').innerText = name + " batch name";
 }
 
+
+// for(let a=5;a>=1;a--){
+//     console.log(a);
+// }
+// let b=10;
+// while(b>=5){
+//     console.log(b)
+//     b--;
+// }
 // `${variableName}`
 // 0 
 // @gmail.com
