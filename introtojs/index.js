@@ -144,6 +144,7 @@
 
 
 // event listner way
+
 // document.getElementById('btn').addEventListener('click', getDate)
 // this will give me the current date and time
 function getDate(){
@@ -196,12 +197,23 @@ function saveName(e){
     // console.log(trimmedname + " neknan")
     // let res = name.repeat(3);
     // let res = name.replace("CN", "Coding Ninjas");
+    // this is a sentance
+    // ['this', 'is', 'a', 'sentence']
     let str = name.split(' ');
     let newslice = str.slice(1, 3);
+    // hello@cn.com
+    let checkdotcom = str.slice(len-4,len)
+    // original str of slice is same
+    // .com
+    // (startIndex, endIndex-1)
 
     console.log(str);
     console.log(newslice)
     let newsplice = str.splice(3, 3)
+    // let newstr = str.splice(2, 4); // ding
+    // str = "co ninjas"
+    // coding ninjas
+    // 012345
     console.log(str);
     // 1st paramter is index position and from that position take elements
     console.log(newsplice)
