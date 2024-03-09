@@ -271,6 +271,7 @@ const age = [10, 40, 20, 30, 50, 45]
 
 // console.log(findLastValue)
 
+// age = [10, 20, 40, 30, 50, 40]
 // let FindLastIndex = age.findLastIndex(function(val){
 //     return val > 30;
 // });
@@ -310,14 +311,19 @@ const age = [10, 40, 20, 30, 50, 45]
 // let val = emailArr.slice(len-4, len)
 // console.log(val)
 // console.log(emailArr)
+// [2, 3, 4, 5, 5]
+// len-2
+
+// [2, 3, 4] - original arr
+// [5, 5] - splice
 
 // let spliceVal = emailArr.splice(len-4)
 // console.log(spliceVal)
 // console.log(emailArr)
-console.log(pqr)
+// console.log(pqr)
 
-var abc;
+// var abc;
 
-let pqr;
+// let pqr;
 
 
