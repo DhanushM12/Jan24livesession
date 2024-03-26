@@ -139,95 +139,95 @@
 // 1. compile time polymorphism - method overloading
 // 2. Run time polyporphism - method overriding
 
-class Food{
-    constructor(vitamins){
-        this.vitamins = vitamins;
-    }
-    getVitamins(){
-        return this.vitamins;
-    }
-    setVitamins(vitamins){
-        this.vitamins = "VItaD";
-    }
-}
- let food2 = new Food("1", "2", "3", "4")
-class Fruits extends Food{
-    constructor(protien, calories, weight, vitamins){
-        super(vitamins);
-        this.protien = protien;
-        this.calories = calories;
-        this.weight = weight;
-    }
+// class Food{
+//     constructor(vitamins){
+//         this.vitamins = vitamins;
+//     }
+//     getVitamins(){
+//         return this.vitamins;
+//     }
+//     setVitamins(vitamins){
+//         this.vitamins = "VItaD";
+//     }
+// }
+//  let food2 = new Food("1", "2", "3", "4")
+// class Fruits extends Food{
+//     constructor(protien, calories, weight, vitamins){
+//         super(vitamins);
+//         this.protien = protien;
+//         this.calories = calories;
+//         this.weight = weight;
+//     }
    
-    // getVitamins(){
-    //     return this.vitamins;
-    // }
-    // setVitamins(vitamins){
-    //     this.vitamins = vitamins;
-    // }
-    setProtein(protien){
-        this.protien = protien;
-    }
-    setCalories(calories){
-        this.calories = calories;
-    }
-    setCalories(calories, weight){
-        this.calories = calories + weight;
-    }
-    setWeight(weight){
-        this.weight = weight;
-    }
-}
+//     // getVitamins(){
+//     //     return this.vitamins;
+//     // }
+//     // setVitamins(vitamins){
+//     //     this.vitamins = vitamins;
+//     // }
+//     setProtein(protien){
+//         this.protien = protien;
+//     }
+//     setCalories(calories){
+//         this.calories = calories;
+//     }
+//     setCalories(calories, weight){
+//         this.calories = calories + weight;
+//     }
+//     setWeight(weight){
+//         this.weight = weight;
+//     }
+// }
 
 // const food1 = new Food();
 // console.log(food1);
-const apple = new Fruits("");
-apple.setVitamins("VitaB");
-apple.setProtein("Protien1");
-apple.setWeight("30");
-apple.setCalories("100g");
-apple.setCalories(200, 30);
-apple.setCalories()
-console.log(apple);
+// const apple = new Fruits("");
+// apple.setVitamins("VitaB");
+// apple.setProtein("Protien1");
+// apple.setWeight("30");
+// apple.setCalories("100g");
+// apple.setCalories(200, 30);
+// apple.setCalories()
+// console.log(apple);
 
-const food1 = new Food();
-console.log(food1);
-food1.setVitamins();
+// const food1 = new Food();
+// console.log(food1);
+// food1.setVitamins();
 
 // compile time poly - same function name but your parameters are different
 // run time poly - same funtion name but using child function instead of parent function
 
 // Encapsulation- means keeping your properties as private and your methods public
 // to make a variable private initial it with underscore ('_')
-class BankAccount{
-    constructor(accNo, accName, balance){
-        this._accNo = accNo;
-        this._accName = accName;
-        this._balance = balance;
-    }
-    showDetails(){
-        console.log(this._accName);
-        console.log(this._accNo);
-        console.log(this._balance);
-    }
-    deposit(amount){
-        this._balance = this._balance + amount;
-        this.showDetails();
-    }
-    withdraw(amount){
-        if(amount <= this._balance){
-            this._balance = this._balance - amount;
-            this.showDetails();
-        } else {
-            console.log("Insuffient funds");
-        }
-    }
-}
+// class BankAccount{
+//     constructor(accNo, accName, balance){
+//         this._accNo = accNo;
+//         this._accName = accName;
+//         this._balance = balance;
+//     }
+//     showDetails(){
+//         console.log(this._accName);
+//         console.log(this._accNo);
+//         console.log(this._balance);
+//     }
+//     deposit(amount){
+//         this._balance = this._balance + amount;
+//         this.showDetails();
+//     }
+//     withdraw(amount){
+//         if(amount <= this._balance){
+//             this._balance = this._balance - amount;
+//             this.showDetails();
+//         } else {
+//             console.log("Insuffient funds");
+//         }
+//     }
+// }
 
-let newAcc = new BankAccount("123", "xyz", 100);
-console.log(newAcc.showDetails())
-newAcc.deposit(300);
-newAcc.withdraw(500);
+// let newAcc = new BankAccount("123", "xyz", 100);
+// console.log(newAcc.showDetails())
+// newAcc.deposit(300);
+// newAcc.withdraw(500);
 
 
 // Abstraction - 
@@ -244,22 +244,108 @@ newAcc.withdraw(500);
 
 // Note - you cannot create an instance of abstract
 // constructor of shape
-function Shape(){
-    this.shapeName = "shapeName";
-    throw new Error(`You cannot make an instance of Abstract class`);
-}
 
-Shape.prototype.display = function(){
-    return this.shapeName;
-}
+// class abc{
 
-let shape1 = new Shape();
+// }
+// function abc(){
+
+// }
+
+// abc.prototype.method
+// function Shape(){
+//     this.shapeName = "shapeName";
+//     throw new Error(`You cannot make an instance of Abstract class`);
+// }
+
+// Shape.prototype.display = function(){
+//     return this.shapeName;
+// }
+
+// let shape1 = new Shape();
 // constructor of triangle
-function Triangle(shapeName){
-    this.shapeName = shapeName;
-}
+// function Triangle(shapeName){
+//     this.shapeName = shapeName;
+// }
 
 // Triangle triangle = new Shape();
-Triangle.prototype = Object.create(Shape.prototype);
-let triangle = new Triangle("Square");
-console.log(triangle.display());
+// Triangle.prototype = Object.create(Shape.prototype);
+// let triangle = new Triangle("Square");
+// console.log(triangle.display());
+
+// abstract class
+// function Shape(){
+//     if(this.constructor === Shape){
+//         throw new Error(`Cannot instance an abstract class`)
+//     }
+//     this.abc = function(){
+//         throw new Error(`Cannot instance an abstract class`)
+//     }
+// }
+// class which implements the abstract class
+// function Square(length){
+//     Shape.call(this);
+//     this.length = length;
+//     this.abc = function(){
+//         console.log(`${this.length} length of square`);
+//     }
+// }
+// Square.prototype = Object.create(Shape.prototype);
+// Square.prototype.constructor= Square;
+
+// let sqr = new Square(10);
+// sqr.abc();
+
+
+// try{
+//     let shp = new Shape();
+// } catch(e){
+//     console.error(e.message);
+// }
+
+
+// let abc = {
+//     xyz: 1,
+//     pqr: 2,
+//     jqw: 3
+// }
+
+// object destructing  - very useful in react js
+// const { jqw ,xyz, pqr, var1 } = abc;
+// console.log(jqw)
+// console.log(xyz);
+// console.log(pqr);
+// console.log(var1);
+
+// static variables or methods are associated with ur class directly and not with instance/object.
+
+// class Car {
+//     constructor(company){
+//         this.company = company;
+//     }
+//     static print(y){
+//         return "car is of " + y.company;
+//     }
+//     print(){
+//         return "car is of " + this.company;
+//     }
+// }
+
+// mycar = new Car("Maruti");
+
+// console.log(Car.print(mycar));
+// console.log(mycar.print());
+
+
+// 10.58
+// Math.floor()-> 10
+// Math.ceil() -> 11
+
+let mystr = '{"name":"John","age":30,"city":"New York"}'
+
+
+let jsonobj =JSON.parse(mystr)
+console.log(jsonobj);
+
+let strofjson = JSON.stringify(jsonobj);
+console.log(strofjson)
